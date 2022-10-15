@@ -1,0 +1,153 @@
+:root{
+    --dark: #102110; 
+    --darker: #1f1a1a; 
+    --darkest: #070707;
+    --light:rgb(251, 245, 245);
+    --gray: #9090ce;
+    --pink: #b36875;
+    --purple: #2b2b5f;
+    
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+    flex-direction:column;
+    min-height: 100vh;
+    background: var(--darkest);
+    color: var(--light);
+}
+
+header{
+    padding: 2rem 4rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+
+    
+}
+header h1{
+    font-size: 2.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: var(--pink);
+}
+
+#newTaskForm{
+    display:flex;
+}
+
+input, button{
+    appearance: none;
+    border: none;
+    outline: auto; /* IF need to change task list outline need to edit this one*/
+    background-color:aqua;
+    border-radius: 1rem;
+    
+}
+input{
+    color: var(--light);
+    background-color: #2b2b5f;
+}
+
+#newTaskInput{
+    flex: 1 1 0%;
+    color:#070707;
+    background-color:chartreuse;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+#newTaskInput::placeholder{
+    color: rgb(39, 14, 180);
+}
+
+#newTaskSubmit{
+    background-color: #2b2b5f; 
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#newTaskSubmit:hover{
+    opacity: 0.8;
+}
+#newTaskSubmit:active{
+    opacity: 0.6;
+}
+
+main{
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+
+}
+.taskList{
+    padding: 1rem;
+}
+
+.taskList h2{
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+    color: crimson;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #2b2b5f;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content .text{
+    color: rgb(240, 230, 230);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 00.4s;
+}
+
+#tasks .task .action{
+    display: flex;
+    margin: 0 0.75rem;
+}
+#tasks .task .action .edit{
+    margin-right: 00.5rem;
+}
+.task .action button{
+    cursor: pointer;
+    transition: 00.4s;
+    margin: 00.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+.task .action button:hover{
+    opacity: 0.8;
+}
+.task .action button:active{
+    opacity: 0.8;
+}
+
+.task .action .delete{
+    color: crimson;
+    background-color: darkmagenta;
+}
